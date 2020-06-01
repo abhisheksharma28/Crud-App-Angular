@@ -1,0 +1,7 @@
+<ul *ngFor="let emp of empdata">
+  <li>
+    {{ emp.firstname }} {{ emp.lastname }}
+    <button (click)="gotoupdate(emp.id)">Update Employee</button>
+    <button (click)="details(emp.id)">Details</button>
+  </li>
+</ul>

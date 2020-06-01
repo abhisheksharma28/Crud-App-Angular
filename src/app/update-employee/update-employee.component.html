@@ -1,0 +1,36 @@
+<div *ngIf="empdata">
+  <h2><div class="text-center text-success">Update Employee</div></h2>
+  <form [formGroup]="userform">
+    <label>Firstname:</label>
+    <input
+      type="text"
+      formControlName="firstname"
+      [(ngModel)]="empdata.firstname"
+      required
+    />
+    <br /><br />
+    <label>Lastname:</label>
+    <input
+      type="text"
+      formControlName="lastname"
+      [(ngModel)]="empdata.lastname"
+      required
+    /><br /><br />
+    <label>Designation:</label>
+    <input
+      type="text"
+      formControlName="designation"
+      [(ngModel)]="empdata.designation"
+      required
+    /><br /><br />
+
+    <button
+      (click)="update()"
+      [disabled]="!userform.valid"
+      type="submit"
+      class="btn btn-primary"
+    >
+      Update Employee
+    </button>
+  </form>
+</div>
